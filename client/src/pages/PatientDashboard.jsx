@@ -13,7 +13,7 @@ const PatientDashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const { data } = await axios.get('http://localhost:5000/api/prescriptions');
+                const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/patients`);
                 setPrescriptions(data);
             } catch (error) {
                 toast.error('Failed to fetch medical data');

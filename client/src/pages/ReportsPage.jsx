@@ -11,7 +11,7 @@ const ReportsPage = () => {
     useEffect(() => {
         const fetchReports = async () => {
             try {
-                const { data } = await axios.get('http://localhost:5000/api/reports');
+                const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/patients`);
                 setReports(data);
             } catch (error) {
                 toast.error('Failed to fetch reports');

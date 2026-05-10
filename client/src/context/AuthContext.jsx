@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
-        const { data } = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+        const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/patients`, { email, password });
         localStorage.setItem('userInfo', JSON.stringify(data));
         setUser(data);
         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const signup = async (name, email, password, role) => {
-        const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password, role });
+        const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/patients`, { name, email, password, role });
         localStorage.setItem('userInfo', JSON.stringify(data));
         setUser(data);
         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;

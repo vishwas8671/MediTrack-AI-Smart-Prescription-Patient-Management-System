@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MediTrack AI – Smart Prescription & Patient Management System
 
 MediTrack AI is a production-grade healthcare SaaS platform designed for doctors and patients. It features AI-powered prescription OCR, drug interaction warnings, and comprehensive patient record management.
@@ -48,3 +49,6 @@ MediTrack AI is a production-grade healthcare SaaS platform designed for doctors
 
 ## 📄 License
 ISC
+=======
+# MediTrack-AI-Smart-Prescription-Patient-Management-System
+>>>>>>> 7db89e924df859053b118b693f7d1a99efe1764b

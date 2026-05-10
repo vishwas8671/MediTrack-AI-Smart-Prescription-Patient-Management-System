@@ -15,7 +15,7 @@ const PrescriptionManagement = () => {
 
     useEffect(() => {
         const fetchPatients = async () => {
-            const { data } = await axios.get('http://localhost:5000/api/patients');
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/patients`);
             setPatients(data);
         };
         fetchPatients();
@@ -76,7 +76,7 @@ const PrescriptionManagement = () => {
     const handleSave = async () => {
         if (!patientId) return toast.error('Please select a patient');
         try {
-            await axios.post('http://localhost:5000/api/prescriptions', {
+            await axios.post(`${import.meta.env.VITE_API_URL}/api/patients`, {
                 patientId,
                 medicines,
                 notes: 'Generated via AI OCR'
